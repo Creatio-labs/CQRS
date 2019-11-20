@@ -1,9 +1,10 @@
 addons:
   sonarcloud:
-    organization: "creatio-labs"
+    organization: creatio-labs
     token:
-      secure: "v1BLe4YRlb99BhzcWmHoxA" # encrypted value of your token
-
+      secure: v1BLe4YRlb99BhzcWmHoxA
 script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - sonar-scanner
+- sonar-scanner
+env:
+  global:
+    secure: qTTjiKiPS7fMeEwQZe/2mFrjLliCQgEmfWtDFwnJ1Du8wl1mrIEhmA8wSIC6/Ddqvo3BNgdEBo4vB2Kx+yRacQdL20+dGwmPSYfujCoP7T4DNGqm0yMeppFnGv7TlLxL8d961d06eObuCGuFZEA/ftqeixKrVsO64IvQxOvAMU7SkRhXv/1VStxH0cCH3uJpGxjAOZlkrof0fPcErXM6TdvQ5QFwTsVjweZZVPaLXq9VvBXrsaHh4RpabhYOEq6E/UAQjCcG2iFKP18nDHnw4tTcWwkauJvYm6Q8jasyY/cYJQcVlwI6nN42AYLsTHX7ad2tpCrq92ubkoKOUda0a8HAvNN2JPFX9aRvvpChTutLoTg0FYgq9BCrq6mifAL4Vf8JDGkWC3FC0eipnf/HXe0kTYbLhrF2dfLOm2XYi0ppb5Vv0bAFXG8RNUEAvN5Effne2qWT7cG4MIG+Z1G30Bhj6gGAMzasQt6clZJKjCrVj7ZKHe6qQPKGczbdWq1d14nCbZTMRW8gnexUrkbXXm9BTlvuzd9lBwbe9l3rr8BIDCegXW8Sp3dEL2uMerbNuS2speqTX1shVgSD8BHPoscaL+3kQ11QEbBgSXhgxdsHBUkazyL78lTIdJIeXx0cAZKXp6V5B4qAz5p/3jurhifPnjaN/jSLw1qXYBDJKAM=
