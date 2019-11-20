@@ -1,4 +1,6 @@
-dist: trusty
+#dist: trusty
+language: csharp
+solution: Global.Configuration.Dal.sln
 addons:
   sonarcloud:
     organization: "creatio-labs"
