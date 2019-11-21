@@ -1,5 +1,14 @@
 language: csharp
-solution: ./src/Global.Configuration.Dal.sln
+solution: src/Global.Configuration.Dal.sln
+addons:
+  sonarcloud:
+    organization: "creatio-labs"
+    token:
+      secure: "xFEmjuUkQDOrGDVq9x1NVx7oPSmhIf7lHRhUotnZ8uvK4Mvb6WH+hj9ch8rad2/33Z0i394eyaNI6JCjhUFnw76timYfdVzA1WNT+iDpH/COVln95cz3ZFaJFwFJqAbUwZMbTegB0p7DKUyZtjpoY16TZbQB0qrtvZEh9N0B7ICdkNrtTH6tnymPjk/uOj1EEc/7LJg3vUYz+uNWynjUN8SakqKGDWLL59TqAb3E8psfsZGIQTI69qLDMwquxWGSC4/DslHX545wnbD9LxMZ2WqMDENhK318LUCn831JrXk1DhWyvcr1pYqso47yLeq3ix+Mh5FUT8epPPoLtTVbZC2KA3h1acV1Z52OBVHviOlklZB+qBnZhLb5ZT1MS4JA7+kadjhMF6isYCL2wOuKYDL9lMSBcT3xq4B+RcMXifgYg6bWpJdM5hjSOAMqB5Vxy5XKhNIwcZmMbIo7lRZ3DFwj/Ivg9PpEagXs4bPsPBWJO1eHlOnI7DKI83a17dQ76al8yNA5Njt4jVpUyQXQw0OdeUwj4yC78fw+JipyXza+xuaXsDgFXTFT9ubL3UP9nSPOWL+uE+N0GJ3G6gpYh5QvFhdkcIMQKNW8GTZzCh3s8eTb6RqGccFSyfOgxGZuWMkVAeNIhaY37uEb2A/POFRXA3S5Nleo7Gm4BIdxr5U="
+
+before_install:
+  - bash ./tools/travis-install.sh
+
 install:
   - nuget restore ./src/Global.Configuration.Dal.sln
   - nuget install NUnit.Console -Version 3.9.0 -OutputDirectory testrunner
